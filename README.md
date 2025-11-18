@@ -68,22 +68,18 @@ DevOps & Deployment	Docker, Render (Backend), Vercel (Frontend), GitHub Actions
 🎨 Modern UI: A clean, responsive dashboard built with the latest Next.js App Router patterns.
 
 ### 🧭 5. Future Roadmap
-[ ] Add LSTM / RNN Models for sequence-based fraud detection.
 
-[ ] Implement Real-time Streaming using Apache Kafka.
+* \[ \]Add LSTM / RNN Models for sequence-based fraud detection.
+* \[ \]Implement Real-time Streaming using Apache Kafka.
+* \[ \]Add User Authentication (OAuth2) for the dashboard.
+* \[ \]Public API Documentation (Swagger/Redoc) integration.
+* \[ \]Deploy model monitoring (Drift Detection).
 
-[ ] Add User Authentication (OAuth2) for the dashboard.
+## **👨‍💻 Author**
 
-[ ] Public API Documentation (Swagger/Redoc) integration.
+Prashant Chandra    
+B.Tech CSE | Aspiring AI-Powered Full Stack Developer    
+📍 Focus Areas: Full Stack Development, Machine Learning, Generative AI    
+[🔗 Live Demo](https://xai-fraud-detection.vercel.app)\! • [GitHub](https://github.com/Chandra-Prashant/xai-fraud-detection)\!
 
-[ ] Deploy model monitoring (Drift Detection).
-
-👨‍💻 Author
-Prashant Chandra B.Tech CSE | Aspiring AI-Powered Full Stack Developer
-
-📍 Focus Areas: Full Stack Development, Machine Learning, Generative AI
-
-🔗 Live Demo! • GitHub!
-
-🏷️ Badges
-⭐ If you like this project, consider giving it a star on GitHub!
+### **⭐ If you like this project, consider giving it a star on [GitHub](https://github.com/Chandra-Prashant/xai-fraud-detection)\!**
