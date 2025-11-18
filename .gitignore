@@ -5,8 +5,7 @@ __pycache__/
 .venv
 venv/
 *.egg-info/
-*.csv
-*.joblib
+ai-model/data/creditcard.csv
 *.pkl
 
 # Node.js / Next.js
