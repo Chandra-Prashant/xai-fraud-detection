@@ -44,26 +44,26 @@ fraud-detection-system/
 
 | Feature | ML Model / Logic | Technical Implementation |
 | :---- | :---- | :---- |
-Multi-Model Inference	Random Forest vs. MLP Neural Network	The system runs two models in parallel. Random Forest is used for the primary decision due to better interpretability, while the Neural Network acts as a challenger model.
-Explainability Engine	SHAP (SHapley Additive exPlanations)	On demand (/explain), the backend calculates the marginal contribution of features (Time, Amount, V1-V28) to the fraud score, visualized as a force plot on the UI.
-Data Consistency	Persisted StandardScaler	To prevent Training-Serving Skew, the exact scaler fitted during training is serialized (scaler.joblib) and loaded into the Docker container for production inference.
+| Multi-Model | Inference	Random Forest vs. MLP Neural Network |	The system runs two models in parallel. Random Forest is used for the primary decision due to better interpretability, while the Neural Network acts as a challenger model. |
+| Explainability | Engine	SHAP (SHapley Additive exPlanations) | On demand (/explain), the backend calculates the marginal contribution of features (Time, Amount, V1-V28) to the fraud score, visualized as a force plot on the UI. |
+| Data Consistency |	Persisted StandardScaler | To prevent Training-Serving Skew, the exact scaler fitted during training is serialized (scaler.joblib) and loaded into the Docker container for production inference. |
 
 ### **🛡️ B. Engineering & DevOps**
 
 | Logic Area | Functionality | Technical Detail |
 | :---- | :---- | :---- |
-Input Validation	Type Safety & Error Handling	Pydantic models strictly validate incoming JSON payloads. Invalid transaction data is rejected with 422 Unprocessable Entity errors before reaching the model.
-Containerization	Reproducibility	A multi-stage Docker build installs system dependencies (gcc, g++) required for scikit-learn and numpy, creating a lightweight production image.
-Performance	Asynchronous Inference	FastAPI's async def endpoints allow non-blocking handling of prediction requests, suitable for high-concurrency scenarios.
+| Input Validation | Type Safety & Error Handling |	Pydantic models strictly validate incoming JSON payloads. Invalid transaction data is rejected with 422 Unprocessable Entity errors before reaching the model. |
+| Containerization |	Reproducibility |	A multi-stage Docker build installs system dependencies (gcc, g++) required for scikit-learn and numpy, creating a lightweight production image. |
+| Performance | Asynchronous Inference |	FastAPI's async def endpoints allow non-blocking handling of prediction requests, suitable for high-concurrency scenarios. |
 
 ### **💻 3. Technology Stack Breakdown**
 
 | Category | Technologies |
 | :---- | :---- |
-Frontend	Next.js 14, TypeScript, Tailwind CSS, Lucide React, Recharts
-Backend (AI)	Python 3.10, FastAPI, Uvicorn, Pydantic, Joblib
-Data Science	Scikit-learn, Pandas, NumPy, SHAP, Matplotlib, Jupyter
-DevOps & Deployment	Docker, Render (Backend), Vercel (Frontend), GitHub Actions
+| **Frontend** |	Next.js 14, TypeScript, Tailwind CSS, Lucide React, Recharts |
+| **Backend (AI)** |	Python 3.10, FastAPI, Uvicorn, Pydantic, Joblib |
+| **Data Science**	| Scikit-learn, Pandas, NumPy, SHAP, Matplotlib, Jupyter |
+| **DevOps & Deploymen** | Docker, Render (Backend), Vercel (Frontend), GitHub Actions |
 
 ## **🌟 4\. Key Highlights & Impact**
 
