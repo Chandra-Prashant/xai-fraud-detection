@@ -69,11 +69,11 @@ DevOps & Deployment	Docker, Render (Backend), Vercel (Frontend), GitHub Actions
 
 ### 🧭 5. Future Roadmap
 
-* \[ \]Add LSTM / RNN Models for sequence-based fraud detection.
-* \[ \]Implement Real-time Streaming using Apache Kafka.
-* \[ \]Add User Authentication (OAuth2) for the dashboard.
-* \[ \]Public API Documentation (Swagger/Redoc) integration.
-* \[ \]Deploy model monitoring (Drift Detection).
+* \[ \] Add LSTM / RNN Models for sequence-based fraud detection.
+* \[ \] Implement Real-time Streaming using Apache Kafka.
+* \[ \] Add User Authentication (OAuth2) for the dashboard.
+* \[ \] Public API Documentation (Swagger/Redoc) integration.
+* \[ \] Deploy model monitoring (Drift Detection).
 
 ## **👨‍💻 Author**
 
