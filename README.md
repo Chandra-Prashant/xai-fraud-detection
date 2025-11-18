@@ -35,45 +35,50 @@ fraud-detection-system/
 
 **Inter-Service Communication**
 
-*Strict Typing: Frontend and Backend share strict interfaces via Pydantic (Backend) and TypeScript Interfaces (Frontend).
+* **Strict Typing**: Frontend and Backend share strict interfaces via Pydantic (Backend) and TypeScript Interfaces (Frontend).
+* **Latency Management**: Optimized Docker container to load large .joblib models into memory only once at startup.
 
-*Latency Management: Optimized Docker container to load large .joblib models into memory only once at startup.
+### **⚙️ 2\. Deep Dive: Advanced Feature Implementation**
 
-### ⚙️ 2. Deep Dive: Advanced Feature Implementation
-🤖 A. AI & Explainability (XAI)
+### **🤖 A. AI & Explainability (XAI)**
 
-Feature	Model / Technique	Technical Implementation
+| Feature | ML Model / Logic | Technical Implementation |
+| :---- | :---- | :---- |
 Multi-Model Inference	Random Forest vs. MLP Neural Network	The system runs two models in parallel. Random Forest is used for the primary decision due to better interpretability, while the Neural Network acts as a challenger model.
 Explainability Engine	SHAP (SHapley Additive exPlanations)	On demand (/explain), the backend calculates the marginal contribution of features (Time, Amount, V1-V28) to the fraud score, visualized as a force plot on the UI.
 Data Consistency	Persisted StandardScaler	To prevent Training-Serving Skew, the exact scaler fitted during training is serialized (scaler.joblib) and loaded into the Docker container for production inference.
-🛡️ B. Engineering & DevOps
 
-Logic Area	Functionality	Technical Detail
+### **🛡️ B. Engineering & DevOps**
+
+| Logic Area | Functionality | Technical Detail |
+| :---- | :---- | :---- |
 Input Validation	Type Safety & Error Handling	Pydantic models strictly validate incoming JSON payloads. Invalid transaction data is rejected with 422 Unprocessable Entity errors before reaching the model.
 Containerization	Reproducibility	A multi-stage Docker build installs system dependencies (gcc, g++) required for scikit-learn and numpy, creating a lightweight production image.
 Performance	Asynchronous Inference	FastAPI's async def endpoints allow non-blocking handling of prediction requests, suitable for high-concurrency scenarios.
-### 💻 3. Technology Stack Breakdown
-Category	Technologies
+
+### **💻 3. Technology Stack Breakdown**
+
+| Category | Technologies |
+| :---- | :---- |
 Frontend	Next.js 14, TypeScript, Tailwind CSS, Lucide React, Recharts
 Backend (AI)	Python 3.10, FastAPI, Uvicorn, Pydantic, Joblib
 Data Science	Scikit-learn, Pandas, NumPy, SHAP, Matplotlib, Jupyter
 DevOps & Deployment	Docker, Render (Backend), Vercel (Frontend), GitHub Actions
-### 🌟 4. Key Highlights & Impact
-🔍 Transparency First: Unlike standard classifiers, this system tells the user why a transaction is 85% likely to be fraud.
 
-⚡ Production-Grade: Includes proper serialization pipelines to ensure the model behaves exactly the same in production as it did in the notebook.
+## **🌟 4\. Key Highlights & Impact**
 
-🐳 Dockerized: Solves the "it works on my machine" problem by containerizing the complex Python dependency tree.
+* 🔍 **Transparency First**: Unlike standard classifiers, this system tells the user why a transaction is 85% likely to be fraud.
+* ⚡ **Production-Grade**: Includes proper serialization pipelines to ensure the model behaves exactly the same in production as it did in the notebook.
+* 🐳 **Dockerized**: Solves the "it works on my machine" problem by containerizing the complex Python dependency tree.
+* 🎨 **Modern UI**: A clean, responsive dashboard built with the latest Next.js App Router patterns.
 
-🎨 Modern UI: A clean, responsive dashboard built with the latest Next.js App Router patterns.
+### **🧭 5. Future Roadmap**
 
-### 🧭 5. Future Roadmap
-
-* \[ \] Add LSTM / RNN Models for sequence-based fraud detection.
-* \[ \] Implement Real-time Streaming using Apache Kafka.
-* \[ \] Add User Authentication (OAuth2) for the dashboard.
-* \[ \] Public API Documentation (Swagger/Redoc) integration.
-* \[ \] Deploy model monitoring (Drift Detection).
+* \[ \] Add **LSTM / RNN Models** for sequence-based fraud detection.
+* \[ \] Implement **Real-time Streaming** using Apache Kafka.
+* \[ \] Add **User Authentication (OAuth2)** for the dashboard.
+* \[ \] Public **API Documentation** (Swagger/Redoc) integration.
+* \[ \] Deploy **model monitoring** (Drift Detection).
 
 ## **👨‍💻 Author**
 
