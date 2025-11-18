@@ -10,9 +10,6 @@ A full-stack, production-ready AI platform that detects credit card fraud in rea
 
 [**🚀 View Live Demo**](https://xai-fraud-detection.vercel.app)
 
-![Project Dashboard](https://placehold.co/1200x600/171717/FFFFFF?text=Project+Screenshot+Here)
-*(Note: Replace the image link above with your actual dashboard screenshot)*
-
 ---
 
 ## 📖 Overview
