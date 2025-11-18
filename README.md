@@ -1,16 +1,10 @@
 # **🧠 Explainable AI (XAI) Fraud Detection System**
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.95-009688?logo=fastapi&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?logo=scikit-learn&logoColor=white)
+[🌐 Live Demo](https://xai-fraud-detection.vercel.app)!  
+[💻 GitHub Repository](https://github.com/Chandra-Prashant/xai-fraud-detection)!
 
 A full-stack, production-ready AI platform that detects credit card fraud in real-time and explains **why** a transaction was flagged.  
 It solves the "Black Box" problem in AI by integrating **SHAP (SHapley Additive exPlanations)** to provide transparent, feature-level insights for every prediction.
-
-[🌐 Live Demo](https://xai-fraud-detection.vercel.app)!  
-[💻 GitHub Repository](https://github.com/Chandra-Prashant/xai-fraud-detection)!
 
 ---
 
@@ -33,10 +27,11 @@ fraud-detection-system/
 ```
 ☁️ Poly-Host Deployment
 
-Service	Stack	Deployment Host	Purpose
-Frontend	Next.js 14, TypeScript, Tailwind	Vercel	Dashboard UI and visualization of SHAP values.
-AI Backend	FastAPI, Python 3.10, Uvicorn	Render	Runs ML inference, SHAP calculations, and serves API.
-Container	Docker	Docker Hub	Ensures consistent runtime environment for ML libraries.
+| Service | Stack | Deployment Host | Purpose |
+| :---- | :---- | :---- | :---- |
+| **Frontend** | Next.js 14 (TypeScript), Tailwind	| **Vercel** |	Dashboard UI and visualization of SHAP values |
+| **AI Backend** |	FastAPI, Python 3.10, Uvicorn |	**Render** |	Runs ML inference, SHAP calculations, and serves API |
+|**Docker** |	Docker Hub |	Ensures consistent runtime environment for ML libraries.
 Inter-Service Communication
 
 Strict Typing: Frontend and Backend share strict interfaces via Pydantic (Backend) and TypeScript Interfaces (Frontend).
