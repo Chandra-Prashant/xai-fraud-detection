@@ -12,6 +12,8 @@ It solves the "Black Box" problem in AI by integrating **SHAP (SHapley Additive 
 [🌐 Live Demo](https://xai-fraud-detection.vercel.app)!  
 [💻 GitHub Repository](https://github.com/yourusername/fraud-detection-system)!
 
+![Project Screenshot](https://placehold.co/1200x600/171717/FFFFFF?text=Project+Screenshot+Here)
+
 ---
 
 ## **🚀 Project Overview & Vision**
@@ -30,21 +32,19 @@ fraud-detection-system/
 ├── ai-model/        # 🧠 Data Science (EDA, Training, Serialization)
 ├── backend/         # ⚙️ FastAPI Inference Engine (Dockerized)
 └── frontend/        # 🖥️ Next.js Client (Dashboard & Visualization)
-```
 ☁️ Poly-Host Deployment
-```bash
+
 Service	Stack	Deployment Host	Purpose
 Frontend	Next.js 14, TypeScript, Tailwind	Vercel	Dashboard UI and visualization of SHAP values.
 AI Backend	FastAPI, Python 3.10, Uvicorn	Render	Runs ML inference, SHAP calculations, and serves API.
 Container	Docker	Docker Hub	Ensures consistent runtime environment for ML libraries.
-```
 Inter-Service Communication
 
 Strict Typing: Frontend and Backend share strict interfaces via Pydantic (Backend) and TypeScript Interfaces (Frontend).
 
 Latency Management: Optimized Docker container to load large .joblib models into memory only once at startup.
 
-## ⚙️ 2. Deep Dive: Advanced Feature Implementation
+⚙️ 2. Deep Dive: Advanced Feature Implementation
 🤖 A. AI & Explainability (XAI)
 
 Feature	Model / Technique	Technical Implementation
@@ -57,13 +57,13 @@ Logic Area	Functionality	Technical Detail
 Input Validation	Type Safety & Error Handling	Pydantic models strictly validate incoming JSON payloads. Invalid transaction data is rejected with 422 Unprocessable Entity errors before reaching the model.
 Containerization	Reproducibility	A multi-stage Docker build installs system dependencies (gcc, g++) required for scikit-learn and numpy, creating a lightweight production image.
 Performance	Asynchronous Inference	FastAPI's async def endpoints allow non-blocking handling of prediction requests, suitable for high-concurrency scenarios.
-## 💻 3. Technology Stack Breakdown
+💻 3. Technology Stack Breakdown
 Category	Technologies
 Frontend	Next.js 14, TypeScript, Tailwind CSS, Lucide React, Recharts
 Backend (AI)	Python 3.10, FastAPI, Uvicorn, Pydantic, Joblib
 Data Science	Scikit-learn, Pandas, NumPy, SHAP, Matplotlib, Jupyter
 DevOps & Deployment	Docker, Render (Backend), Vercel (Frontend), GitHub Actions
-## 🌟 4. Key Highlights & Impact
+🌟 4. Key Highlights & Impact
 🔍 Transparency First: Unlike standard classifiers, this system tells the user why a transaction is 85% likely to be fraud.
 
 ⚡ Production-Grade: Includes proper serialization pipelines to ensure the model behaves exactly the same in production as it did in the notebook.
@@ -72,7 +72,7 @@ DevOps & Deployment	Docker, Render (Backend), Vercel (Frontend), GitHub Actions
 
 🎨 Modern UI: A clean, responsive dashboard built with the latest Next.js App Router patterns.
 
-## 🧭 5. Future Roadmap
+🧭 5. Future Roadmap
 [ ] Add LSTM / RNN Models for sequence-based fraud detection.
 
 [ ] Implement Real-time Streaming using Apache Kafka.
