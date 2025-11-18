@@ -31,13 +31,13 @@ fraud-detection-system/
 | :---- | :---- | :---- | :---- |
 | **Frontend** | Next.js 14 (TypeScript), Tailwind	| **Vercel** |	Dashboard UI and visualization of SHAP values |
 | **AI Backend** |	FastAPI, Python 3.10, Uvicorn |	**Render** |	Runs ML inference, SHAP calculations, and serves API |
-|**Web Service | Docker |	Docker Hub |	Ensures consistent runtime environment for ML libraries |
+|**Web Service** | Docker |	Docker Hub |	Ensures consistent runtime environment for ML libraries |
 
-**Inter-Service Communication
+**Inter-Service Communication**
 
-Strict Typing: Frontend and Backend share strict interfaces via Pydantic (Backend) and TypeScript Interfaces (Frontend).
+*Strict Typing: Frontend and Backend share strict interfaces via Pydantic (Backend) and TypeScript Interfaces (Frontend).
 
-Latency Management: Optimized Docker container to load large .joblib models into memory only once at startup.
+*Latency Management: Optimized Docker container to load large .joblib models into memory only once at startup.
 
 ### ⚙️ 2. Deep Dive: Advanced Feature Implementation
 🤖 A. AI & Explainability (XAI)
