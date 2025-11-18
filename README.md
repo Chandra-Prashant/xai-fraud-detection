@@ -12,8 +12,6 @@ It solves the "Black Box" problem in AI by integrating **SHAP (SHapley Additive 
 [🌐 Live Demo](https://xai-fraud-detection.vercel.app)!  
 [💻 GitHub Repository](https://github.com/yourusername/fraud-detection-system)!
 
-![Project Screenshot](https://placehold.co/1200x600/171717/FFFFFF?text=Project+Screenshot+Here)
-
 ---
 
 ## **🚀 Project Overview & Vision**
