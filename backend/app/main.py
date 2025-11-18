@@ -190,4 +190,4 @@ async def explain(
 # 6. (Optional) Define a root "hello world" endpoint
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Explainable AI Fraud API!"}
+    return {"message": "Welcome to the Explainable AI Fraud Detection System API!"}
