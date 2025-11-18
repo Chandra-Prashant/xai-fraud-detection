@@ -25,7 +25,8 @@ fraud-detection-system/
 ├── backend/         # ⚙️ FastAPI Inference Engine (Dockerized)
 └── frontend/        # 🖥️ Next.js Client (Dashboard & Visualization)
 ```
-☁️ Poly-Host Deployment
+
+**☁️ Poly-Host Deployment**
 
 | Service | Stack | Deployment Host | Purpose |
 | :---- | :---- | :---- | :---- |
