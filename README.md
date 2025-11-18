@@ -10,7 +10,7 @@ A full-stack, production-ready AI platform that detects credit card fraud in rea
 It solves the "Black Box" problem in AI by integrating **SHAP (SHapley Additive exPlanations)** to provide transparent, feature-level insights for every prediction.
 
 [🌐 Live Demo](https://xai-fraud-detection.vercel.app)!  
-[💻 GitHub Repository](https://github.com/Chandra-Prashant/fraud-detection-system)!
+[💻 GitHub Repository](https://github.com/Chandra-Prashant/xai-fraud-detection)!
 
 ---
 
