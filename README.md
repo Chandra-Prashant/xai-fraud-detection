@@ -84,8 +84,8 @@ fraud-detection-system/
 ## **👨‍💻 Author**
 
 Prashant Chandra    
-B.Tech CSE | Aspiring AI-Powered Full Stack Developer    
-📍 Focus Areas: Full Stack Development, Machine Learning, Generative AI    
+B.Tech CSE | *Full Stack Engineer & AI Researcher*    
+📍 **Specialization:** Microservices, Computer Vision (CNNs), Explainable AI (XAI)
 [🔗 Live Demo](https://xai-fraud-detection.vercel.app)\! • [GitHub](https://github.com/Chandra-Prashant/xai-fraud-detection)\!
 
 ### **⭐ If you like this project, consider giving it a star on [GitHub](https://github.com/Chandra-Prashant/xai-fraud-detection)\!**
